@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Message Board</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Welcome to my Message Board</h1>
+    <button id="newMsgBtn">Post something!</button>
+    <div id="messages-wrapper">
+      <% for (msg of messages) { %>
+        <div class="message">
+          <h3 class="user"><%= msg.user %></h3>
+          <p class="text"><%= msg.text %></p>
+          <p class="date"><%= msg.added %></p>
+        </div>
+      <% } %>
+    </div>
+  </body>
+</html>
